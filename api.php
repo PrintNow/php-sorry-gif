@@ -7,7 +7,13 @@ $request_time = time(true);
 if($type && $data && $small){
   $TEMP_ROOT = ROOT.'/templates/'.$type.'/';
   $TEMP_ASS = $TEMP_ROOT.$type.'.ass';
-  $TEMP_VIDEO = $TEMP_ROOT.$type.'.mp4';
+  
+  if($small == true){
+    $TEMP_VIDEO = $TEMP_ROOT.'small-'.$type.'.mp4';
+  }else{
+    $TEMP_VIDEO = $TEMP_ROOT.$type.'.mp4';
+  }
+  
   $CACHE_ASS_PATH = ROOT.'/cache/'.$type.'_'.$request_time.'.ass';
   if(file_exists($TEMP_ROOT)){
     $ass_file = file_get_contents($TEMP_ASS);
