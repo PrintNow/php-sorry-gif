@@ -14,6 +14,10 @@ if($type && $data && $small){
     $TEMP_VIDEO = $TEMP_ROOT.$type.'.mp4';
   }
   
+  if(!file_exists(ROOT.'/cache')){
+      mkdir(ROOT.'/cache');
+   }
+  
   $CACHE_ASS_PATH = ROOT.'/cache/'.$type.'_'.$request_time.'.ass';
   if(file_exists($TEMP_ROOT)){
     $ass_file = file_get_contents($TEMP_ASS);
