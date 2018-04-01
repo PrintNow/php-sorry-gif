@@ -10,7 +10,7 @@ if($type && $data && $small){
   $TEMP_ROOT = ROOT.'/templates/'.$type.'/';
   $TEMP_ASS = $TEMP_ROOT.$type.'.ass';
   $TEMP_VIDEO = $TEMP_ROOT.$type.'.mp4';
-  $CACHE_ASS_PATH = $TEMP_ROOT.'cache/'.$request_time.'.ass';
+  $CACHE_ASS_PATH = ROOT.'cache/'.$type.'_'.$request_time.'.ass';
 
   if(file_exists($TEMP_ROOT)){
     $ass_file = file_get_contents($TEMP_ASS);
@@ -20,13 +20,13 @@ if($type && $data && $small){
     $change_ass = str_replace($str_source,$data,$ass_file);
     file_put_contents($CACHE_ASS_PATH,$change_ass);
 
-    $out_put_file = ROOT.'/cache/'.$request_time.'.gif';
-    $command = 'ffmpeg -y -i '.$TEMP_VIDEO.' -vf "ass='.$CACHE_ASS_PATH.'" '.$out_put_file;
+    echo $command = 'ffmpeg -y -i '.$TEMP_VIDEO.' -vf "ass='.$CACHE_ASS_PATH.'" '.$out_put_file;
     system($command,$input);
 
     $result['code'] = 200;
     $result['msg'] = '应该生成成功...';
     $result['path'] = '/cache/'.$request_time.'.gif';
+    unlink($CACHE_ASS_PATH);
   }else{
     $result['code'] = 404;
     $result['msg'] = '模板文件不存在！';
