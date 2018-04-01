@@ -74,3 +74,6 @@ ffmpeg version
 ## 使用
 1. 开启 PHP `system` 函数，可以参照这篇文章 [php开启exec等函数](http://blog.51cto.com/pencild/1412023)
 2. 敬请享用！
+
+## DEMO：[点我](https://nowtool.cn/sorry/)
+> 只能生成小图（1M 小水管，凑合着用吧，明天换成美国服务器）
