@@ -1,7 +1,6 @@
 <?php
 define('ROOT',__DIR__);
-echo '{"code":200,"msg":"\u5e94\u8be5\u751f\u6210\u6210\u529f...","path":"\/cache\/1522645986.gif"}';
-die;
+
 $type = isset($_POST['type']) ? $_POST['type'] : false;
 $data = isset($_POST['data']) ? $_POST['data'] : false;
 $small = isset($_POST['small']) ? $_POST['small'] : false;
