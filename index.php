@@ -95,5 +95,5 @@ $INDEX = require_once __DIR__.'/templates/index.php';
 
 	</body>
 	<script src="https://cdn.bootcss.com/mdui/0.3.0/js/mdui.min.js"></script>
-  <script src="./script.js?version=10020"></script>
+  <script src="./script.js?version=10040"></script>
 </html>
