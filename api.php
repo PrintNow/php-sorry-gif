@@ -1,23 +1,25 @@
 <?php
 define('ROOT',__DIR__);
+echo '{"code":200,"msg":"\u5e94\u8be5\u751f\u6210\u6210\u529f...","path":"\/cache\/1522645986.gif"}';
+die;
 $type = isset($_POST['type']) ? $_POST['type'] : false;
 $data = isset($_POST['data']) ? $_POST['data'] : false;
 $small = isset($_POST['small']) ? $_POST['small'] : false;
 $request_time = time(true);
 if($type && $data && $small){
   $TEMP_ROOT = ROOT.'/templates/'.$type.'/';
-  $TEMP_ASS = $TEMP_ROOT.$type.'.ass';
-  
+  $TEMP_ASS = $TEMP_ROOT.'template.ass';
+
   if($small == true){
-    $TEMP_VIDEO = $TEMP_ROOT.'small-'.$type.'.mp4';
+    $TEMP_VIDEO = $TEMP_ROOT.'small-template.mp4';
   }else{
-    $TEMP_VIDEO = $TEMP_ROOT.$type.'.mp4';
+    $TEMP_VIDEO = $TEMP_ROOT.'template.mp4';
   }
-  
+
   if(!file_exists(ROOT.'/cache')){
       mkdir(ROOT.'/cache');
    }
-  
+
   $CACHE_ASS_PATH = ROOT.'/cache/'.$type.'_'.$request_time.'.ass';
   if(file_exists($TEMP_ROOT)){
     $ass_file = file_get_contents($TEMP_ASS);
