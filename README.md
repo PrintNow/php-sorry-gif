@@ -142,3 +142,6 @@ templates/index.php                           # 模板索引
 
 然后把文本替换成模板字符串 <?=[n]=?>
 ![图片](https://i.loli.net/2018/04/02/5ac1fb7ec0102.png)
+
+# LICENSE
+The MIT License (MIT). Please see [LICENSE](https://github.com/PrintNow/php-sorry-gif/LICENSE) for more information.
