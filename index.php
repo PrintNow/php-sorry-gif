@@ -17,7 +17,7 @@ $INDEX = require_once __DIR__.'/templates/index.php';
 			<div class="mdui-toolbar mdui-color-theme">
 				<span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-drawer="{target: '#main-drawer', swipe: true}"><i class="mdui-icon material-icons">menu</i></span>
 				<a href="https://nowtool.cn" target="_blank" class="mdui-typo-headline mdui-hidden-xs">现在工具网</a>
-				<a href="https://sorry.nowtime.cc" class="mdui-typo-title">首页</a>
+				<a href="./" class="mdui-typo-title">首页</a>
 			</div>
 		</header>
 
@@ -26,7 +26,7 @@ $INDEX = require_once __DIR__.'/templates/index.php';
 				<li class="mdui-list-item mdui-ripple">
 					<i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-blue">home</i>
 					<div class="mdui-list-item-content">
-						<a href="https://sorry.nowtime.cc" class="mdui-ripple">首页</a>
+						<a href="./" class="mdui-ripple">首页</a>
 					</div>
 				</li>
 
