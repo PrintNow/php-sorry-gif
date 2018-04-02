@@ -118,7 +118,7 @@ ffmpeg version
 1. 开启 PHP `system` 函数（一般是禁用了的），可以参照这篇文章 [php开启exec等函数](http://blog.51cto.com/pencild/1412023)
 2. 将源码上传到网站根目录
 3. 敬请享用！
-4. DEMO：[点我](https://nowtool.cn/sorry/)
+4. DEMO：[点我](https://gifs.ga/)
 
 # 添加 GIF 模板
 添加模板需要加入以下文件
