@@ -10,7 +10,7 @@ if($type && $data && $small){
   $TEMP_ASS = $TEMP_ROOT.'template.ass';
 
   if($small == true){
-    $TEMP_VIDEO = $TEMP_ROOT.'small-template.mp4';
+    $TEMP_VIDEO = $TEMP_ROOT.'template-small.mp4';
   }else{
     $TEMP_VIDEO = $TEMP_ROOT.'template.mp4';
   }
