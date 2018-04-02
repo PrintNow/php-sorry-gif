@@ -23,7 +23,7 @@ if($type && $data && $small){
   if(file_exists($TEMP_ROOT)){
     $ass_file = file_get_contents($TEMP_ASS);
     for($i=0;$i<count($data);$i++){
-      $str_source[$i] = '<?_{'.$i.'}_?>';
+      $str_source[$i] = '<?=['.$i.']=?>';
     }
     $change_ass = str_replace($str_source,$data,$ass_file);
     file_put_contents($CACHE_ASS_PATH,$change_ass);

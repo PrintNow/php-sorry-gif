@@ -24,9 +24,9 @@ Style: sorry,WenQuanYi Micro Hei,23,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.00,0:00:01.80,sorry,,0,0,0,,<?_{0}_?>
-Dialogue: 0,0:00:01.88,0:00:03.76,sorry,,0,0,0,,<?_{1}_?>
-Dialogue: 0,0:00:03.81,0:00:04.66,sorry,,0,0,0,,<?_{2}_?>
-Dialogue: 0,0:00:04.66,0:00:05.90,sorry,,0,0,0,,<?_{3}_?>
-Dialogue: 0,0:00:06.02,0:00:08.42,sorry,,0,0,0,,<?_{4}_?>
-Dialogue: 0,0:00:08.42,0:00:10.75,sorry,,0,0,0,,<?_{5}_?>
+Dialogue: 0,0:00:00.00,0:00:01.80,sorry,,0,0,0,,<?=[0]=?>
+Dialogue: 0,0:00:01.88,0:00:03.76,sorry,,0,0,0,,<?=[1]=?>
+Dialogue: 0,0:00:03.81,0:00:04.66,sorry,,0,0,0,,<?=[2]=?>
+Dialogue: 0,0:00:04.66,0:00:05.90,sorry,,0,0,0,,<?=[3]=?>
+Dialogue: 0,0:00:06.02,0:00:08.42,sorry,,0,0,0,,<?=[4]=?>
+Dialogue: 0,0:00:08.42,0:00:10.75,sorry,,0,0,0,,<?=[5]=?>

@@ -12,7 +12,7 @@
 > `诸葛孔明beta` 没想到，竟说出如此粗鄙之语
 
 # 说明
-思路参考 [sorry](https://github.com/xtyxtyx/sorry)。
+思路参考 [sorry](https://github.com/xtyxtyx/sorry)，。
 目前已有：
 1. [Ruby](https://github.com/xtyxtyx/sorry)
 2. [Python](https://github.com/East196/sorrypy)
@@ -60,8 +60,9 @@ GIF 生成核心：[ffmpeg](https://www.ffmpeg.org/)
 ```
 
 # 准备
-## 1. 安装依赖命令
-### 1-1. Ubuntu 下安装 `ffmpeg`（包管理是 apt 的 Linux 可使用该命令）
+## 1. 安装 `ffmpeg` 依赖命令
+> 我是参照网上的一些教程写的，写的可能并不全面，你可以去 Goolge、Baidu。配置时，一定要加上 `--enable-libass` 选项
+### Ubuntu 下安装 `ffmpeg`（包管理是 apt 的 Linux 可使用该命令）
 ```
 #需要用到x264库
 sudo apt-get install libx264-dev
@@ -80,14 +81,14 @@ wget https://ffmpeg.org/releases/ffmpeg-3.4.2.tar.bz2
 tar -xf ffmpeg-3.4.2.tar.bz2
 cd ffmpeg-3.4.2
 
-#配置 ffmpeg，主要是打开 x11grab
-./configure --enable-gpl --enable-version3 --enable-nonfree --enable-postproc  --enable-pthreads --enable-libfaac  --enable-libmp3lame --enable-libtheora --enable-libx264 --enable-libxvid --enable-x11grab --enable-libvorbis
+#配置 ffmpeg
+./configure --enable-gpl --enable-version3 --enable-nonfree --enable-postproc  --enable-pthreads --enable-libfaac  --enable-libmp3lame --enable-libtheora --enable-libx264 --enable-libxvid --enable-x11grab --enable-libvorbis --enable-libass
 
 #编译安装
 make && make install
 
 #安装完成后执行
-ffmpeg version
+ffmpeg -version
 #看是否安装成功
 
 #本安装命令参考：http://www.cnblogs.com/arccosxy/p/3440210.html
@@ -95,7 +96,7 @@ ffmpeg version
 `Ubuntu` [安装中文字体](http://www.it266.com/blog/2017/243.html)
 注意：如果你安装了可以不用安装；其他系统安装中文字体请自行 Google、Baidu
 
-### 1-2. CentOS 下安装 `ffmpeg`（包管理是 yum 的 Linux 可使用该命令）
+### CentOS 下安装 `ffmpeg`（包管理是 yum 的 Linux 可使用该命令）
 ```
 wget https://ffmpeg.org/releases/ffmpeg-3.4.2.tar.bz2
 yum -y install bzip2
@@ -117,13 +118,14 @@ ffmpeg version
 
 
 ## 使用
-1. 开启 PHP `system` 函数，可以参照这篇文章 [php开启exec等函数](http://blog.51cto.com/pencild/1412023)
+> 因为配置 PHP 环境比较复杂，所以你是初识 PHP 的话，建议使用这个 [Node.JS](https://github.com/q809198545/node-sorry) 版本的，相对来说比较简单。
+1. 开启 PHP `system` 函数（一般是禁用了的），可以参照这篇文章 [php开启exec等函数](http://blog.51cto.com/pencild/1412023)
 2. 将源码上传到网站根目录
 3. 敬请享用！
 4. DEMO：[点我](https://nowtool.cn/sorry/)
 
 # 添加 GIF 模板
-向网站中添加模板需要加入以下文件
+添加模板需要加入以下文件
 ```
 templates/<template_name>/template.mp4        # 视频模板
 templates/<template_name>/template-small.mp4  # [兼容微信小尺寸]视频模板
@@ -133,3 +135,10 @@ templates/<template_name>/template.ass        # 字幕模板
 ```
 templates/index.php                           # 模板索引
 ```
+
+## 制作字幕模板 template.ass
+首先使用 [aegisub](http://rj.baidu.com/soft/detail/17278.html) 为模板视频创建字幕，保存为 `template.ass`（aegisub 教程可以看这个 https://tieba.baidu.com/p/1360405931 ）
+![图片](https://dn-coding-net-production-pp.qbox.me/56a213df-9ff7-41e0-9b6c-96b1f0fe2cb6.png)
+
+然后把文本替换成模板字符串 <?=[n]=?>
+![图片](https://i.loli.net/2018/04/02/5ac1fb7ec0102.png)
