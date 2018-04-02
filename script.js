@@ -27,7 +27,7 @@ function creat_gif() {
     dataType: 'json',
     success: function (data) {
       if(data.code == 200){
-       		var result = '<h4>生成成功！</h4><p>点击下载：<a class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent" href=".'+data.path+'" download="weisuoyuwei.gif">下载</a></p>';
+       		var result = '<h4>生成成功！</h4><p>点击下载：<a class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent" href=".'+data.path+'" download="'+type+'.gif">下载</a></p>';
       }else{
         	var result = '<h4>生成失败！</h4><p>error code：'+data.code+'</p><br/><p>error msg：'+data.msg+'</p>';
       }
