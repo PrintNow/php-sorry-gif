@@ -3,8 +3,9 @@ var $$ = mdui.JQ;
 function creat_gif() {
   var type = location.hash.substring(1);
   var small = $$("#small-size").is(":checked");
-  var get_input_data = $$("input[name='first']").get();
+  var get_input_data = $$("input[name='"+type+"_value']").get();
   var input_data = [];
+
   for (var i=0;i<get_input_data.length;i++) {
     if(get_input_data[i].value == '' || get_input_data[i].value == false) {
       input_data[i] = get_input_data[i].placeholder;
@@ -30,9 +31,9 @@ function creat_gif() {
       }else{
         	var result = '<h4>生成失败！</h4><p>error code：'+data.code+'</p><br/><p>error msg：'+data.msg+'</p>';
       }
-      
+
       mdui.alert(result);
-      
+
     }
   });
 }
