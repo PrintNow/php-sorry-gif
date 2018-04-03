@@ -54,5 +54,12 @@ return [
     'template_name' => 'kongming',
     'input_placeholder' => ['没想到','竟说出如此粗鄙之语']
   ],
+  [
+    'name' => 'pop子和pipi美的日常',
+    'small' => false,
+    'input_num' => 7,
+    'template_name' => 'popteamepic',
+    'input_placeholder' => ['嘿嘿！','丢雷楼谋','大力D','嘿嘿！！','丢埋雷楼豆','再大力D','唔好丢我啊']
+  ]
 
 ];

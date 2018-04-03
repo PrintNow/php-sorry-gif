@@ -1,0 +1,16 @@
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: sorry,WenQuanYi Micro Hei,25,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,1.2,0.5,2,5,5,2,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.52,Default,,0,0,0,,
+Dialogue: 0,0:00:01.56,0:00:02.02,Default,,0,0,0,,<?=[0]=?>
+Dialogue: 0,0:00:02.22,0:00:03.06,Default,,0,0,0,,<?=[1]=?>
+Dialogue: 0,0:00:03.46,0:00:04.52,Default,,0,0,0,,<?=[2]=?>
+Dialogue: 0,0:00:04.52,0:00:05.44,Default,,0,0,0,,
+Dialogue: 0,0:00:06.04,0:00:06.81,Default,,0,0,0,,<?=[3]=?>
+Dialogue: 0,0:00:06.81,0:00:08.11,Default,,0,0,0,,<?=[4]=?>
+Dialogue: 0,0:00:06.90,0:00:08.11,Default,,0,0,0,,<?=[5]=?>
+Dialogue: 0,0:00:08.11,0:00:09.82,Default,,0,0,0,,
+Dialogue: 0,0:00:09.82,0:00:11.28,Default,,0,0,0,,<?=[6]=?>
