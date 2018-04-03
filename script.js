@@ -2,13 +2,7 @@ var $$ = mdui.JQ;
 
 function creat_gif() {
   var type = location.hash.substring(1);
-
-  if($("#"+type+"-small-size").length>0){
-    var small = $$("#"+type+"-small-size").is(":checked");
-  }else{
-    var small = 'false';
-  }
-
+  var small = $$("#"+type+"-small-size").is(":checked");
   var get_input_data = $$("input[name='"+type+"_value']").get();
   var input_data = [];
 

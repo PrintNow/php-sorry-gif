@@ -83,6 +83,12 @@ $INDEX = require_once __DIR__.'/templates/index.php';
 							<i class="mdui-checkbox-icon"></i>
 							是否生成 [微信兼容小尺寸] GIF 图片
 						</label>
+					<?php else : ?>
+						<label class="mdui-checkbox mdui-hidden">
+							<input id="<?php echo $value['template_name']; ?>-small-size" type="checkbox" value="false"/>
+							<i class="mdui-checkbox-icon"></i>
+							是否生成 [微信兼容小尺寸] GIF 图片
+						</label>
 					<?php endif; ?>
 
 					<div class="mdui-col">
@@ -92,8 +98,7 @@ $INDEX = require_once __DIR__.'/templates/index.php';
 			</div>
 		<?php endforeach; ?>
 
-
 	</body>
-	<script src="https://cdn.bootcss.com/mdui/0.3.0/js/mdui.min.js"></script>
-  <script src="./script.js?version=10040"></script>
+	<script src="https://cdn.bootcss.com/mdui/0.4.0/js/mdui.min.js"></script>
+  <script src="./script.js?version=10050"></script>
 </html>
