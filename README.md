@@ -1,9 +1,9 @@
 # [PHP版]在线制作 `sorry 为所欲为` 等其他8种的gif
 
-```
-2018/-04-03 13:24
-真的修复了我 GIF小图片 无法生成问题...
-```
+#### 2018-04-03
+1. 修复字幕过小问题，我把 Fontsize 改成了 38 ，在我的站点：[gifs.ga](https://gifs.ga)，这个大小刚刚好，如果发现在你的服务器中生成的字幕过大，请修改 `templates/<template_name>/template.ass` 里的 Fontsize，改成适合自己的大小 ![TIM截图20180403133716.png](https://i.loli.net/2018/04/03/5ac3131fabec7.png)
+2. 真的修复了 GIF 小图片 无法生成问题...
+
 
 > 添加 GIF 模板非常简单，只需要将剪辑好的视频和配置好的字幕文件（.ass 格式）放到 `templates/<template_name>/`，然后在 `templates/index.php` 加个数组即可（具体请看：[添加 GIF 模板](https://github.com/PrintNow/php-sorry-gif#%E6%B7%BB%E5%8A%A0-gif-%E6%A8%A1%E6%9D%BF)）。
 > 1. `为所欲为` sorry，有钱真的可以为所欲为
