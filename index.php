@@ -79,7 +79,7 @@ $INDEX = require_once __DIR__.'/templates/index.php';
 
 					<?php if($value['small']  == true): ?>
 						<label class="mdui-checkbox">
-							<input id="small-size" type="checkbox" value="true" checked/>
+							<input id="<?php echo $value['template_name']; ?>-small-size" type="checkbox" value="true" checked/>
 							<i class="mdui-checkbox-icon"></i>
 							是否生成 [微信兼容小尺寸] GIF 图片
 						</label>
