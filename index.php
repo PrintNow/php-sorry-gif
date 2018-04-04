@@ -70,29 +70,51 @@ $INDEX = require_once __DIR__.'/templates/index.php';
 		<?php foreach ($INDEX as $value) : ?>
 			<div id="<?php echo $value['template_name']; ?>" class="mdui-p-a-2">
 				<div class="mdui-panel" mdui-panel>
-					<?php for($i=0; $i<$value['input_num']; $i++) : ?>
-						<div class="mdui-textfield">
-							<label class="mdui-textfield-label">第 <?php echo $i+1; ?> 句</label>
-							<input class="mdui-textfield-input" type="text" name="<?php echo $value['template_name']; ?>_value" placeholder="<?php echo $value['input_placeholder'][$i]; ?>"/>
-						</div>
-					<?php endfor; ?>
 
-					<?php if($value['small']  == true): ?>
-						<label class="mdui-checkbox">
-							<input id="<?php echo $value['template_name']; ?>-small-size" type="checkbox" value="true" checked/>
-							<i class="mdui-checkbox-icon"></i>
-							是否生成 [微信兼容小尺寸] GIF 图片
-						</label>
-					<?php else : ?>
-						<label class="mdui-checkbox mdui-hidden">
-							<input id="<?php echo $value['template_name']; ?>-small-size" type="checkbox" value="false"/>
-							<i class="mdui-checkbox-icon"></i>
-							是否生成 [微信兼容小尺寸] GIF 图片
-						</label>
-					<?php endif; ?>
+					<div class="mdui-row">
+						<div class="mdui-col-md-4">
+							<?php if ($value['preview_image'] == 'false') : ?>
+								<div class="mdui-card">
+								  <div class="mdui-card-content"><h3>没有预览图哦</h4>子曰：「学而时习之，不亦说乎？有朋自远方来，不亦乐乎？人不知，而不愠，不亦君子乎？」</div>
+								</div>
+							<?php else : ?>
+								<div class="mdui-card">
+									<div class="mdui-card-media">
+										<img src="<?php echo $value['preview_image']; ?>"/>
+									</div>
+									<!-- <div class="mdui-card-actions">
+										<button class="mdui-btn mdui-ripple">点这儿加载动态图片</button>
+									</div> -->
+								</div>
+							<?php endif; ?>
+						</div>
+
+						<div class="mdui-col-md-8">
+							<?php for($i=0; $i<$value['input_num']; $i++) : ?>
+								<div class="mdui-textfield">
+									<label class="mdui-textfield-label">第 <?php echo $i+1; ?> 句</label>
+									<input class="mdui-textfield-input" type="text" name="<?php echo $value['template_name']; ?>_value" placeholder="<?php echo $value['input_placeholder'][$i]; ?>"/>
+								</div>
+							<?php endfor; ?>
+
+							<?php if($value['small']  == true): ?>
+								<label class="mdui-checkbox">
+									<input id="<?php echo $value['template_name']; ?>-small-size" type="checkbox" value="true" checked/>
+									<i class="mdui-checkbox-icon"></i>
+									是否生成 [微信兼容小尺寸] GIF 图片
+								</label>
+							<?php else : ?>
+								<label class="mdui-checkbox mdui-hidden">
+									<input id="<?php echo $value['template_name']; ?>-small-size" type="checkbox" value="false"/>
+									<i class="mdui-checkbox-icon"></i>
+									是否生成 [微信兼容小尺寸] GIF 图片
+								</label>
+							<?php endif; ?>
+						</div>
+					</div>
 
 					<div class="mdui-col">
-						<button class="mdui-btn mdui-btn-block mdui-color-theme-accent mdui-ripple" onclick="creat_gif()">生成</button>
+						<hr class="mdui-invisible"/><button class="mdui-btn mdui-btn-block mdui-color-theme-accent mdui-ripple" onclick="creat_gif()">生成</button>
 					</div>
 				</div>
 			</div>
