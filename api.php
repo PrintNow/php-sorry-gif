@@ -25,6 +25,9 @@ if($type && $data && $small){
 
   if($small == 'true' || DEFAULT_CREATE_SMALL_GIF === true){
     $TEMP_VIDEO = $TEMP_ROOT.'template-small.mp4';
+    if(!file_exists(ROOT.'/cache')){
+      $TEMP_VIDEO = $TEMP_ROOT.'template.mp4';
+    }
   }else{
     $TEMP_VIDEO = $TEMP_ROOT.'template.mp4';
   }
