@@ -1,17 +1,17 @@
 # [PHP版]在线制作 `sorry 为所欲为` 等其他8种的gif
 
+#### 2018-04-05
+1. 添加上传到 `搜狗图片` 并生成外链，如果需要，请修改 `config.php`
+
+#### 2018-04-04
+1. 添加 `在座的各位都是垃圾` 模板
+
 #### 2018-04-03
 1. 修复字幕过小问题，我把 Fontsize 改成了 38 ，在我的站点：[gifs.ga](https://gifs.ga)，这个大小刚刚好，如果发现在你的服务器中生成的字幕过大，请修改 `templates/<template_name>/template.ass` 里的 Fontsize，改成适合自己的大小 ![TIM截图20180403133716.png](https://i.loli.net/2018/04/03/5ac3131fabec7.png)
 2. 真的修复了 GIF 小图片 无法生成问题...
 
 
 > 添加 GIF 模板非常简单，只需要将剪辑好的视频和配置好的字幕文件（.ass 格式）放到 `templates/<template_name>/`，然后在 `templates/index.php` 加个数组即可（具体请看：[添加 GIF 模板](https://github.com/PrintNow/php-sorry-gif#%E6%B7%BB%E5%8A%A0-gif-%E6%A8%A1%E6%9D%BF)）。
-> 1. `为所欲为` sorry，有钱真的可以为所欲为
-> 2. `王境泽` 我就算是饿死，死外边 从这跳下去，也不会吃你们一点东西，真好吃
-> 3. `金坷垃` 金坷垃好处都有啥，谁说对了就给他，肥料掺了金坷垃，不流失 不蒸发 零浪费，肥料掺了金坷垃，能吸收两米下的氮磷钾
-> 4. `土拔鼠` 金坷垃好处都有啥，谁说对了就给他
-> 5. `窃格瓦拉` 没有钱啊 肯定要做的啊，不做的话没有钱用，那你不会去打工啊，有手有脚的，打工是不可能打工的，这辈子是不可能打工的
-> 6. `诸葛孔明beta` 没想到，竟说出如此粗鄙之语
 
 # 说明
 思路参考 [sorry](https://github.com/xtyxtyx/sorry)，。
@@ -64,7 +64,7 @@ GIF 生成核心：[ffmpeg](https://www.ffmpeg.org/)
 # 准备
 ## 1. 安装 `ffmpeg` 依赖命令
 > 我是参照网上的一些教程写的，写的可能并不全面，你可以去 Goolge、Baidu。配置时，一定要加上 `--enable-libass` 选项
-### Ubuntu 下安装 `ffmpeg`（包管理是 apt 的 Linux 可使用该命令）
+### Ubuntu 下安装 `ffmpeg`
 ```
 #需要用到x264库
 sudo apt-get install libx264-dev
@@ -98,12 +98,10 @@ ffmpeg -version
 `Ubuntu` [安装中文字体](http://www.it266.com/blog/2017/243.html)
 注意：如果你安装了可以不用安装；其他系统安装中文字体请自行 Google、Baidu
 
-### CentOS 下安装 `ffmpeg`（包管理是 yum 的 Linux 可使用该命令）
+### CentOS 7 下安装 `ffmpeg`
 ```
+yum -y install bzip2 yasm libass libass-devel
 wget https://ffmpeg.org/releases/ffmpeg-3.4.2.tar.bz2
-yum -y install bzip2
-yum -y install yasm
-yum -y install libass libass-devel
 tar -xf ffmpeg-3.4.2.tar.bz2
 cd ffmpeg-3.4.2
 ./configure --enable-libass
@@ -111,7 +109,7 @@ cd ffmpeg-3.4.2
 make && make install
 
 #安装完成后执行
-ffmpeg version
+ffmpeg -version
 #看是否安装成功
 
 #本安装命令摘自：https://github.com/q809198545/node-sorry

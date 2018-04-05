@@ -1,4 +1,6 @@
 <?php
+require_once "./config.php";
+
 $OS_TYPE=DIRECTORY_SEPARATOR=='\\'?'windows':'linux';
 
 /**
@@ -21,7 +23,7 @@ if($type && $data && $small){
   $TEMP_ASS = $TEMP_ROOT.'template.ass';
   $CACHE_ASS_PATH = ROOT.'/cache/'.$type.'_'.$request_time.'.ass';
 
-  if($small == 'true'){
+  if($small == 'true' || DEFAULT_CREATE_SMALL_GIF === true){
     $TEMP_VIDEO = $TEMP_ROOT.'template-small.mp4';
   }else{
     $TEMP_VIDEO = $TEMP_ROOT.'template.mp4';
@@ -46,7 +48,6 @@ if($type && $data && $small){
     }
 
     $change_ass = str_replace($str_source,$data,$ass_file);
-
     $create_temporary_ass = fopen($CACHE_ASS_PATH, "w") or die('{"code":501,"msg":"临时字幕文件创建失败，请网站管理员检查 `cache` 目录是否具有读写权限或用户组设否设置正确！"}');
     fwrite($create_temporary_ass, $change_ass) or die('{"code":502,"msg":"临时字幕文件已创建，但写入失败，请网站管理员检查 `cache` 目录是否具有读写权限或用户组设否设置正确！"}');
     fclose($create_temporary_ass);
@@ -59,7 +60,22 @@ if($type && $data && $small){
     $result['code'] = 200;
     $result['type'] = $type;
     $result['msg'] = '应该生成成功...';
-    $result['path'] = '/cache/'.$request_time.'.gif';
+
+    if(UPLOAD_TO_SOGOU_IMG === true && filesize($out_put_file)<10000000){
+      require_once ROOT.'/usr/lib/functions.php';
+      $r = upload_to_sogou($out_put_file);
+      if($r === false) {
+        //如果上传失败，则返回本地路径
+        $result['path'] = '/cache/'.$request_time.'.gif';
+        $result['upload_status'] = 'fail';
+      }else{
+        $result['path'] = 'https://'.$r['host'][rand(0,4)].$r['path'];
+        $result['upload_status'] = 'success';
+      }
+    }else{
+      $result['path'] = '/cache/'.$request_time.'.gif';
+    }
+
   }else{
     $result['code'] = 404;
     $result['type'] = $type;

@@ -1,4 +1,5 @@
 <?php
+$INDEX = require_once __DIR__.'/config.php';
 $INDEX = require_once __DIR__.'/templates/index.php';
 ?>
 <!DOCTYPE html>
@@ -97,18 +98,20 @@ $INDEX = require_once __DIR__.'/templates/index.php';
 								</div>
 							<?php endfor; ?>
 
-							<?php if($value['small']  == true): ?>
-								<label class="mdui-checkbox">
-									<input id="<?php echo $value['template_name']; ?>-small-size" type="checkbox" value="true" checked/>
-									<i class="mdui-checkbox-icon"></i>
-									是否生成 [微信兼容小尺寸] GIF 图片
-								</label>
-							<?php else : ?>
-								<label class="mdui-checkbox mdui-hidden">
-									<input id="<?php echo $value['template_name']; ?>-small-size" type="checkbox" value="false"/>
-									<i class="mdui-checkbox-icon"></i>
-									是否生成 [微信兼容小尺寸] GIF 图片
-								</label>
+							<?php if(DEFAULT_CREATE_SMALL_GIF === false) : ?>
+								<?php if($value['small']  == true): ?>
+									<label class="mdui-checkbox">
+										<input id="<?php echo $value['template_name']; ?>-small-size" type="checkbox" value="true" checked/>
+										<i class="mdui-checkbox-icon"></i>
+										是否生成 [微信兼容小尺寸] GIF 图片
+									</label>
+								<?php else : ?>
+									<label class="mdui-checkbox mdui-hidden">
+										<input id="<?php echo $value['template_name']; ?>-small-size" type="checkbox" value="false"/>
+										<i class="mdui-checkbox-icon"></i>
+										是否生成 [微信兼容小尺寸] GIF 图片
+									</label>
+								<?php endif; ?>
 							<?php endif; ?>
 						</div>
 					</div>
