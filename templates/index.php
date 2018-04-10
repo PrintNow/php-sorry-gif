@@ -21,6 +21,7 @@ return [
     'template_name' => 'weisuoyuwei',
     'input_placeholder' => ['好啊','就算你是一流工程师','就算你出报告再完美','我叫你改报告你就要改','毕竟我是客户','客户了不起啊','sorry 客户真的了不起','以后叫他天天改报告','天天改 天天改']
   ],
+
   [
     'name' => '王境泽',
     'small' => true,
@@ -29,6 +30,7 @@ return [
     'template_name' => 'wangjingze',
     'input_placeholder' => ['我就算是饿死','死外边 从这跳下去','也不会吃你们一点东西','真好吃']
   ],
+
   [
     'name' => '金坷垃',
     'small' => true,
@@ -37,6 +39,7 @@ return [
     'template_name' => 'jinkela',
     'input_placeholder' => ['金坷垃好处都有啥','谁说对了就给他','肥料掺了金坷垃','不流失 不蒸发 零浪费','肥料掺了金坷垃','能吸收两米下的氮磷钾']
   ],
+
   [
     'name' => '土拔鼠',
     'small' => true,
@@ -45,6 +48,7 @@ return [
     'template_name' => 'marmot',
     'input_placeholder' => ['金坷垃好处都有啥','谁说对了就给他']
   ],
+
   [
     'name' => '窃格瓦拉',
     'small' => true,
@@ -53,6 +57,7 @@ return [
     'template_name' => 'dagong',
     'input_placeholder' => ['没有钱啊 肯定要做的啊','不做的话没有钱用','那你不会去打工啊','有手有脚的','打工是不可能打工的','这辈子是不可能打工的']
   ],
+
   [
   'name' => '大师兄',
   'small' => true,
@@ -60,7 +65,17 @@ return [
   'preview_image' => 'https://i.loli.net/2018/04/04/5ac4b32378cf1.jpg',
   'template_name' => 'dashixiong',
   'input_placeholder' => ['问得好，如果各位有兴趣的话','可以加入我们空手道部门','不过要经过选拔','因为我只会训练精英','绝对不会接收垃圾','看我干嘛？你把我当垃圾？','不是...不要误会，我不是针对你','我是说在座的各位都是垃圾']
-],
+  ],
+
+  [
+  'name' => '曾小贤答题',
+  'small' => false,
+  'input_num' => 4,
+  'preview_image' => 'https://i.loli.net/2018/04/10/5acc4ddf5f133.png',
+  'template_name' => 'zengxiaoxiandati',
+  'input_placeholder' => ['平时你打电子游戏吗','偶尔','星际还是魔兽','连连看']
+  ],
+
   [
     'name' => '诸葛孔明beta',
     'small' => true,
@@ -69,6 +84,7 @@ return [
     'template_name' => 'kongming',
     'input_placeholder' => ['没想到','竟说出如此粗鄙之语']
   ],
+
   [
     'name' => 'pop子和pipi美的日常',
     'small' => false,
