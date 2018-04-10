@@ -69,14 +69,14 @@ if($type && $data && $small){
       $r = upload_to_sogou($out_put_file);
       if($r === false) {
         //如果上传失败，则返回本地路径
-        $result['path'] = '/cache/'.$request_time.'.gif';
+        $result['path'] = './cache/'.$request_time.'.gif';
         $result['upload_status'] = 'fail';
       }else{
         $result['path'] = 'https://'.$r['host'][rand(0,4)].$r['path'];
         $result['upload_status'] = 'success';
       }
     }else{
-      $result['path'] = '/cache/'.$request_time.'.gif';
+      $result['path'] = './cache/'.$request_time.'.gif';
     }
 
   }else{

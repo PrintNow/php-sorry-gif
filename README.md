@@ -1,4 +1,11 @@
 # [PHP版]在线制作 `sorry 为所欲为` 等其他8种的gif
+> #### 稳定版下载地址：[点击查看稳定版（Bug 少）](https://github.com/PrintNow/php-sorry-gif/releases)
+> #### 开发版下载地址：[点击下载开发版（Bug 多）](https://github.com/PrintNow/php-sorry-gif/archive/master.zip)
+> 如果你要提交模板，欢迎 issues、Pull requests 或发送素材到邮箱 wenzhouchan#gmail.com (#换成@)
+> 模板如何制作？请往下看
+
+#### 2018-04-10
+1. 解决程序放在二级目录下运行，无法下载&预览问题
 
 #### 2018-04-05
 1. 添加上传到 `搜狗图片` 并生成外链，如果需要，请修改 `config.php`
