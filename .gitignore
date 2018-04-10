@@ -2,3 +2,5 @@
 *.zip
 0.php
 test
+aliyun-oss
+.gitignore
