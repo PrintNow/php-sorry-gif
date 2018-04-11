@@ -29,7 +29,7 @@
 ---
 
 
-# 点击查看 [使用方法](https://github.com/PrintNow/php-sorry-gif/Usage.md)，点击查看 [添加 GIF 模板](https://github.com/PrintNow/php-sorry-gif/Add_Template.md)
+## 点击查看 [使用方法](https://github.com/PrintNow/php-sorry-gif/blob/master/Usage.md)，点击查看 [添加 GIF 模板](https://github.com/PrintNow/php-sorry-gif/blob/master/Add_Template.md)
 
 ---
 
