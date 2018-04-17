@@ -59,6 +59,15 @@ return [
   ],
 
   [
+    'name' => '窃格瓦拉-删库跑路',
+    'small' => true,
+    'input_num' => 6,
+    'preview_image' => 'https://img04.sogoucdn.com/app/a/100520146/66716F615DB6B807642EC516F30F0AD4',
+    'template_name' => 'shankupaolu',
+    'input_placeholder' => ['删库了肯定要跑路啊','老板拿着刀砍我','数据库是怎么删的？','那天我问群里人怎么用','他们说输入 sudo rm -rf /*','cnm(吃柠檬)的数据库就没了']
+  ],
+
+  [
   'name' => '大师兄',
   'small' => true,
   'input_num' => 8,
@@ -74,6 +83,15 @@ return [
   'preview_image' => 'https://i.loli.net/2018/04/10/5acc4ddf5f133.png',
   'template_name' => 'zengxiaoxiandati',
   'input_placeholder' => ['平时你打电子游戏吗','偶尔','星际还是魔兽','连连看']
+  ],
+
+  [
+  'name' => '压力大爷',
+  'small' => false,
+  'input_num' => 4,
+  'preview_image' => 'https://i.loli.net/2018/04/10/5acc4ddf5f133.png',
+  'template_name' => 'yalidaye',
+  'input_placeholder' => ['现在这法律啊，尽扯淡','孩子他不经常回来看我违什么法','30岁了不结婚那才是违法']
   ],
 
   [
