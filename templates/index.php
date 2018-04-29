@@ -89,7 +89,7 @@ return [
   'name' => '压力大爷',
   'small' => false,
   'input_num' => 4,
-  'preview_image' => 'https://i.loli.net/2018/04/10/5acc4ddf5f133.png',
+  'preview_image' => 'https://i.loli.net/2018/04/29/5ae58fb3c5857.png',
   'template_name' => 'yalidaye',
   'input_placeholder' => ['现在这法律啊，尽扯淡','孩子他不经常回来看我违什么法','30岁了不结婚那才是违法']
   ],
