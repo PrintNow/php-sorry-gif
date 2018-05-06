@@ -28,7 +28,7 @@ return [
     'input_num' => 4,
     'preview_image' => 'https://i.loli.net/2018/04/04/5ac4b32378084.jpg',
     'template_name' => 'wangjingze',
-    'input_placeholder' => ['我就算是饿死','死外边 从这跳下去','也不会吃你们一点东西','真好吃']
+    'input_placeholder' => ['我就算是饿死','死外边 从这跳下去','也不会吃你们一点东西','真香']
   ],
 
   [
