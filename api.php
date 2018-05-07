@@ -18,7 +18,7 @@ $data = isset($_POST['data']) ? $_POST['data'] : false;
 $small = isset($_POST['small']) ? $_POST['small'] : false;
 $request_time = time(true);
 
-if($type && $data && $small){
+if($type && $data && $small && ctype_alnum($type)){
   $TEMP_ROOT = ROOT.'/templates/'.$type.'/';
   $TEMP_ASS = $TEMP_ROOT.'template.ass';
   $CACHE_ASS_PATH = ROOT.'/cache/'.$type.'_'.$request_time.'.ass';
