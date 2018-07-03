@@ -40,7 +40,7 @@ if (INVALID_TEXT === true) {
 			}
 		}
 	} else {
-		exit(json_encode(sprintf('请补全UPYUN API参数 ,配置文件： %s' ,ROOT . 'config.php') ,JSON_UNESCAPED_UNICODE));
+		exit(json_encode(sprintf('请补全UPYUN API参数 ,配置文件： %s' ,ROOT . '/config.php') ,JSON_UNESCAPED_UNICODE));
 	}
 }
 
